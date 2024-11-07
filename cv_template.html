@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <div class="contact-info">
+            <p>{{ address }}</p>
+            <p>{{ contact }}</p>
+        </div>
+    </header>
+    <section>
+        <h2>Summary</h2>
+        <p>{{ summary }}</p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Professional Experience</h2>
+        {% for exp in experience %}
+        <h3>{{ exp.title }}</h3>
+        <p>{{ exp.date }}</p>
+        <ul>
+            {% for desc in exp.description %}
+            <li>{{ desc }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </section>
+    <section>
+        <h2>Education</h2>
+        {% for edu in education %}
+        <h3>{{ edu.title }}</h3>
+        <p>{{ edu.date }}</p>
+        <ul>
+            {% for desc in edu.description %}
+            <li>{{ desc }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </section>
+    <section>
+        <h2>Interests</h2>
+        <p>{{ interests }}</p>
+    </section>
+</body>
+</html>
