@@ -9,7 +9,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    text-align: left;
 }
 
 nav ul {
@@ -35,7 +35,7 @@ section {
 }
 
 footer {
-    text-align: center;
+    text-align: left;
     padding: 10px 0;
     background-color: #333;
     color: #fff;
