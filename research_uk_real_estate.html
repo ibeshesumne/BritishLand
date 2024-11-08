@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Real Estate Research</title>
+    <title>British Land Research</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -17,133 +17,87 @@
         </nav>
     </header>
     <section id="research">
-        <h2>UK Real Estate Research</h2>
+        <h2>British Land</h2>
         <nav class="submenu-nav">
-            <ul>
-                <li><a href="#portfolio">Present Portfolio Character</a></li>
-                <li><a href="#threats">Threats and Opportunities</a></li>
-                <li><a href="#outlook">Property Sector Outlook: Offices, Retail, Industrial, Car Park, Hospitality</a></li>
-            </ul>
+            <ol>
+                <li><a href="#portfolio">Portfolio Character as of 2024-03-31</a></li>
+                <li><a href="#asset-location">Asset Location</a></li>
+                <li><a href="#swot-analysis">SWOT Analysis</a></li>
+                <li><a href="#threats">Threats</a></li>
+                <li><a href="#opportunities">Opportunities</a></li>
+                <li><a href="#sector-outlook">Real Estate Sector Potential</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ol>
         </nav>
         <section id="portfolio">
-            <h3>Present Portfolio Character</h3>
+            <h3>1. Portfolio Character as of 2024-03-31</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>Property Type</th>
-                        <th>Location</th>
-                        <th>Value (£)</th>
+                        <th>Type of Asset</th>
+                        <th>Rent (£ mil)</th>
+                        <th>Value (£ mil)</th>
+                        <th>Yield (%)</th>
+                        <th>Square Footage (m²)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Office</td>
-                        <td>London</td>
-                        <td>5,000,000</td>
+                        <td>Campus</td>
+                        <td>1.5</td>
+                        <td>20</td>
+                        <td>7.5</td>
+                        <td>50,000</td>
                     </tr>
                     <tr>
-                        <td>Retail</td>
-                        <td>Manchester</td>
-                        <td>3,000,000</td>
+                        <td>Retail and Logistics</td>
+                        <td>2.0</td>
+                        <td>25</td>
+                        <td>8.0</td>
+                        <td>60,000</td>
                     </tr>
                     <tr>
-                        <td>Industrial</td>
-                        <td>Birmingham</td>
-                        <td>2,500,000</td>
-                    </tr>
-                    <tr>
-                        <td>Car Park</td>
-                        <td>Edinburgh</td>
-                        <td>1,500,000</td>
-                    </tr>
-                    <tr>
-                        <td>Hospitality</td>
-                        <td>Glasgow</td>
-                        <td>2,000,000</td>
+                        <td>Total</td>
+                        <td>3.5</td>
+                        <td>45</td>
+                        <td>7.8</td>
+                        <td>110,000</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="chart-container">
-                <canvas id="lineChart"></canvas>
-            </div>
-            <div class="chart-container">
-                <canvas id="pieChart"></canvas>
-            </div>
+        </section>
+        <section id="asset-location">
+            <h3>2. Asset Location</h3>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bZJV5chq5nEznQyY1d-V5X0dzeWKK8s&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+        </section>
+        <section id="swot-analysis">
+            <h3>3. SWOT Analysis</h3>
+            <ul>
+                <li><strong>Strengths:</strong> Details about strengths go here.</li>
+                <li><strong>Weaknesses:</strong> Details about weaknesses go here.</li>
+                <li><strong>Threats:</strong> Details about threats go here.</li>
+                <li><strong>Opportunities:</strong> Details about opportunities go here.</li>
+            </ul>
         </section>
         <section id="threats">
-            <h3>Threats and Opportunities</h3>
-            <p>Details about the threats and opportunities go here.</p>
+            <h3>4. Threats</h3>
+            <p>Details about the threats go here.</p>
         </section>
-        <section id="outlook">
-            <h3>Property Sector Outlook: Offices, Retail, Industrial, Car Park, Hospitality</h3>
-            <p>Details about the property sector outlook go here.</p>
+        <section id="opportunities">
+            <h3>5. Opportunities</h3>
+            <p>Details about the opportunities go here.</p>
+        </section>
+        <section id="sector-outlook">
+            <h3>6. Real Estate Sector Potential</h3>
+            <p>Details about the real estate sector potential go here.</p>
+        </section>
+        <section id="recommendations">
+            <h3>7. Recommendations</h3>
+            <p>Details about the recommendations go here.</p>
         </section>
     </section>
     <footer>
         <p>&copy; 2024 Jake Leary. All rights reserved.</p>
     </footer>
-    <script>
-        // Line Chart Data
-        const lineChartData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'Portfolio Value (£)',
-                data: [6500000, 6700000, 6800000, 6900000, 7000000, 7100000, 7200000],
-                fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
-            }]
-        };
-
-        // Pie Chart Data
-        const pieChartData = {
-            labels: ['Office', 'Retail', 'Industrial', 'Car Park', 'Hospitality'],
-            datasets: [{
-                label: 'Property Distribution',
-                data: [5000000, 3000000, 2500000, 1500000, 2000000],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)'
-                ],
-                borderWidth: 1
-            }]
-        };
-
-        // Line Chart Configuration
-        const lineChartConfig = {
-            type: 'line',
-            data: lineChartData,
-            options: {}
-        };
-
-        // Pie Chart Configuration
-        const pieChartConfig = {
-            type: 'pie',
-            data: pieChartData,
-            options: {}
-        };
-
-        // Create Line Chart
-        const lineChart = new Chart(
-            document.getElementById('lineChart'),
-            lineChartConfig
-        );
-
-        // Create Pie Chart
-        const pieChart = new Chart(
-            document.getElementById('pieChart'),
-            pieChartConfig
-        );
-    </script>
 </body>
 </html>
